@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b2f2f;
+  --color-accent: #ea580c;
+  --color-secondary: #fef3c7;
+  --color-dark: #111827;
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* Base styles to apply fonts */
+@layer base {
+  body {
+    font-family: var(--font-body);
+    @apply bg-secondary text-primary dark:bg-dark dark:text-secondary;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
